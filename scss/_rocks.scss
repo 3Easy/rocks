@@ -30,7 +30,7 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Type
 
 body {
-  @include font-feature-settings('kern', 'liga', 'pnum');
+  // @include font-feature-settings('kern', 'liga', 'pnum');
   -webkit-font-smoothing: antialiased;
   color: $font-color;
   font-family: $font-family;
@@ -109,7 +109,7 @@ figure {
 
 button,
 .button {
-  @include appearance(none);
+  // @include appearance(none);
   -webkit-font-smoothing: antialiased;
   background-color: $action-color;
   border-radius: $border-radius;
@@ -201,7 +201,7 @@ textarea {
 }
 
 input[type="search"] {
-  @include appearance(none);
+  // @include appearance(none);
 }
 
 input[type="checkbox"],
@@ -225,7 +225,7 @@ select {
 // Tables 
 
 table {
-  @include font-feature-settings('kern', 'liga', 'pnum');
+  // @include font-feature-settings('kern', 'liga', 'pnum');
   border-collapse: collapse;
   margin: 0.6em 0;
   table-layout: fixed;
