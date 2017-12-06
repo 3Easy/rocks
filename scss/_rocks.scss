@@ -1,0 +1,251 @@
+// Rocks 0.0.1
+// https://github.com/3easy/rocks
+// Rocks by 3Easy & Co. 
+// Bourbon & Neat On Tha Rocks
+// Copyright 2011-2017 3Easy & Co.
+// MIT License
+
+
+// Variables
+
+$font-family: $helvetica; // Bourbon 
+$font-size: 1em;
+$line-height: 1.5;
+
+$action-color: #f01a22; // Brand Color
+$background-colour: #fff;
+$font-color: #444;
+
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd; // all the grays
+
+$border-color: $light-gray;
+$border: 1px solid $border-color;
+$border-radius: 3px;
+
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Type
+
+body {
+  @include font-feature-settings('kern', 'liga', 'pnum');
+  -webkit-font-smoothing: antialiased;
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
+//   font-size: $font-size; // let browser defaults stand
+  line-height: $line-height;
+  margin: 0 0 0.6em;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 0.6em;
+  padding: 0;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+strong,
+b {
+	font-weight: 600;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+hr {
+  border-bottom: $border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 0.6em 0;
+}
+
+// Media 
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+// Buttons
+
+button,
+.button {
+  @include appearance(none);
+  -webkit-font-smoothing: antialiased;
+  background-color: $action-color;
+  border-radius: $border-radius;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.6em 1em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: darken($action-color, 15%);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+// Forms 
+
+fieldset {
+  background-color: lighten($border-color, 10%);
+  border: $border;
+  margin: 0 0 0.6em;
+  padding: 0.6em;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.6em;
+
+  &.required::after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+input, 
+select,
+textarea {
+  background-color: $background-colour;
+  border: $border;
+  border-radius: $border-radius;
+  box-shadow: $form-box-shadow;
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: $font-size;
+  margin-bottom: 0.6em;
+  padding: 0.6em;
+  transition: border-color;
+  width: 100%;
+
+  &:hover {
+    border-color: darken($border-color, 10%);
+  }
+
+  &:focus {
+    border-color: $action-color;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  @include appearance(none);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.6em;
+}
+
+input[type="file"] {
+  padding-bottom: 0.6em;
+  width: 100%;
+}
+
+select {
+  margin-bottom: 0.6em;
+  max-width: 100%;
+  width: auto;
+}
+
+
+// Tables 
+
+table {
+  @include font-feature-settings('kern', 'liga', 'pnum');
+  border-collapse: collapse;
+  margin: 0.6em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  border-bottom: 1px solid darken($border-color, 10%);
+  font-weight: 600;
+  padding: 0.6em 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: $border;
+  padding: 0.6em 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "rocks",
+  "description": "Bourbon & Neat On Tha Rocks",
+  "version": "0.0.1",
+  "authors": [
+    "3Easy <hello@3easy.org>"
+  ],
+  "main": "scss/_rocks.scss",
+  "license": "MIT",
+  "homepage": "https://github.com/3Easy/rocks",
+  "keywords": [
+    "css",
+    "mixins",
+    "sass",
+    "scss"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "repository": {
+	  "type": "git",
+	  "url": "git://github.com/3Easy/rocks.git"
+	}
+}
